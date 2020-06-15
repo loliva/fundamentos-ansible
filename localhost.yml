@@ -19,3 +19,6 @@
 
     - debug:
         msg: "{{ansible_all_ipv4_addresses[1]}}"
+
+    - debug:
+        msg: "{{texto}}"
