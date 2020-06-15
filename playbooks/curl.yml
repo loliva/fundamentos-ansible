@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Revision Cabeceras url
+      uri:
+        url: "http://{{item}}"
+        return_content: yes
+      with_items:
+        - "{{urls}}"
+      register: urls_res
+
+    - debug:
+        msg: "{{ urls_res | json_query('results[*].server')}}"
