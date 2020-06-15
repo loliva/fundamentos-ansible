@@ -1,2 +1,17 @@
 ---
-# tasks file for custom
+- name: Instala nginx
+  apt:
+    name: nginx
+    state: present
+  notify: "restart nginx"
+  register: nginx
+
+- debug:
+    msg: "{{ nginx }}"
+
+- name: Revisa proceso
+  shell: "ps xua| grep nginx | grep -v grep"
+  register: proceso
+
+- debug:
+    msg: "{{ proceso }}"
