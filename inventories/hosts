@@ -5,7 +5,7 @@ host01
 
 
 [todo:children]
-localhost
+all
 servers
 
 [todo:vars]
