@@ -1,12 +1,14 @@
 ---
-- name: Template example
-  hosts: localhost
+- hosts: localhost
   connection: local
+
+  roles:
+    - custom
 
   tasks:
     - name: Cambia index.html
       template:
-        src: index.html.j2
+        src: index.j2
         dest: /var/www/html/index.nginx-debian.html
         mode: 0755
       register: index
