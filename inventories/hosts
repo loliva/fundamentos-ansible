@@ -1,13 +1,6 @@
+[all]
 localhost
+host01
 
 [servers]
 host01
-
-
-[unificado:children]
-localhost
-servers
-
-[unificado:vars]
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-command_warnings=False
