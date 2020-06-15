@@ -2,13 +2,14 @@
 - name: Ansible Variable Example Playbook
   hosts: localhost
   connection: local
+
   tasks:
     - debug:
         msg:
           - " Data type of 'ansible_all_ipv4_addresses' is {{ ansible_all_ipv4_addresses | type_debug }} "
 
     - debug:
-        msg: "{{ ansible_architecture }}"
+        msg: "{{ansible_architecture}}"
 
     - debug:
         msg: "{{ansible_apparmor.status}}"
