@@ -3,9 +3,9 @@
   connection: local
 
   tasks:
-    - include_role:
+    - import_role:
       name: custom
-      
+
     - name: Cambia index.html
       template:
         src: index.j2
