@@ -1,6 +1,13 @@
-[all]
 localhost
-host01
 
 [servers]
 host01
+
+
+[todo:children]
+localhost
+servers
+
+[todo:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+command_warnings=False
