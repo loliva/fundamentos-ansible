@@ -2,10 +2,10 @@
 - hosts: localhost
   connection: local
 
-  roles:
-    - custom
-
   tasks:
+    - include_role:
+      name: custom
+      
     - name: Cambia index.html
       template:
         src: index.j2
