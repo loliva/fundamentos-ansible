@@ -12,4 +12,4 @@
       register: urls_res
 
     - debug:
-        msg: "{{ urls_res | json_query('results[*].server')}}"
+        msg: "{{ urls_res | json_query('results[*].status')}}"
