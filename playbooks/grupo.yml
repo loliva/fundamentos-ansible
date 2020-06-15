@@ -2,6 +2,8 @@
 - name: Ansible Variable Example Playbook
   hosts: grupo
   connection: local
+  vars:
+    texto: "Hallo Welt"
 
   tasks:
     - debug:
